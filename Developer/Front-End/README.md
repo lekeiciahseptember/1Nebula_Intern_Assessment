@@ -8,4 +8,4 @@ If you have any questions please do not hesitate to raise them with us. Please n
 Good luck, take your time, and have fun! 😊
 
 ## Exercise
-The [Front-End Challenge](https://github.com/NebulaCodeChallenges/FrontEndChallenge-1Nebula/blob/main/Front-End%20Challenge.pdf) file contains the instructions for the challenge that you are required to complete, and the contacts.json file can be found [here](https://github.com/NebulaCodeChallenges/FrontEndChallenge-1Nebula/blob/main/contacts.json).
+The [Front-End Challenge](https://github.com/1Nebula/Assessment/blob/main/Developer/Front-End/Front%20End%20Challenge.pdf) file contains the instructions for the challenge that you are required to complete, and the contacts.json file can be found [here](https://github.com/NebulaCodeChallenges/FrontEndChallenge-1Nebula/blob/main/contacts.json).
