@@ -35,6 +35,7 @@ MovieID	| #Name | #Genre
 
 Using a SQL script, retrieve the data the analyst requires.
 
+
 # Back-end Code Challenges
 * Only send back the code required for your the challenges
 
@@ -44,6 +45,71 @@ Write a C# method that will take, as input, a string and dependent on the string
 1. If the length is a multiple of 2 your method must print out "Stack"
 2. If the length is a multiple of 4 your method must print out "Overflow"
 3. If the length is a multiple of 2 and 4 your method must print out "Stack Overflow!"
+
+```csharp
+using System;
+class CheckingStringLength
+{
+    static void Main(string[] args)
+    {
+        while (true) // Loop to continue the game
+        {
+            Console.WriteLine("Enter a String (word):");
+            string input = Console.ReadLine();
+
+            // Check for empty or whitespace input and request valid word
+            if (string.IsNullOrWhiteSpace(input))
+            {
+                Console.WriteLine("Please enter a valid word.");
+                continue; 
+            }
+
+            // Check for input with spaces (multiple words) and request input again
+            if (input.Contains(" "))
+            {
+                Console.WriteLine("Please enter a word without spaces.");
+                continue; 
+            }
+
+            DetermineOutput(input);
+
+            // Provide the option to continue (Y) or exit (N)
+            Console.WriteLine("Do you want to check another word? (Y/N)");
+            string response = Console.ReadLine();
+
+            if (response.Trim().Equals("N", StringComparison.OrdinalIgnoreCase))
+            {
+                Console.WriteLine("Thanks for playing.");
+                break;
+            }
+        }
+    }
+
+
+    static void DetermineOutput(string input)
+    {
+        int wordLength = input.Length;
+
+        // Determine the output based on input conditions. If none of the conditions are met, prompt for a different word. 
+        if (wordLength % 2 == 0 && wordLength % 4 == 0)
+        {
+            Console.WriteLine("Stack Overflow!");
+        }
+        else if (wordLength % 2 == 0)
+        {
+            Console.WriteLine("Stack");
+        }
+        else if (wordLength % 4 == 0)
+        {
+            Console.WriteLine("Overflow");
+        }
+        else
+        {
+            Console.WriteLine("None of the conditions were met. Try a different word!");
+        }
+    }
+}
+ ```
 
 ## Question 2
 This task is about code refactoring. Below you are given classes Animal, Horse and Sheep.
