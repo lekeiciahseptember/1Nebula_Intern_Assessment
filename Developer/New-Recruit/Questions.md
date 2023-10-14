@@ -53,7 +53,6 @@ You need to refactor Horse and Sheep as you see fit. The goal is to make the cla
 Don't make any change to the properties (methods) of the class Animal.
 
 ```csharp
-
     // Not making any changes to the Animal class, as per instructions above.
     public class Animal
     {
@@ -67,7 +66,7 @@ Don't make any change to the properties (methods) of the class Animal.
             return "Durrr";
         }
     }
-    
+
     // Using a concept in OOP (Inheritance).
     class Horse : Animal
     {
@@ -76,15 +75,16 @@ Don't make any change to the properties (methods) of the class Animal.
             return "Neigh";
         }
     }
-    
+
     // Using a concept in OOP (Inheritance).
-    class Sheep
+    class Sheep : Animal
     {
         // Overriding the MakeNoise() method to return "Baaah"
         public override string MakeNoise(){
             return "Baaah";
         }
     }
+
 
 
 ```
