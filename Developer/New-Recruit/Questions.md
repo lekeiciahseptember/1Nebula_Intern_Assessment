@@ -5,6 +5,8 @@
 Please see the attached ERD diagram image. The diagram was submitted as a solution to storing employee Cellphone data, voice and sms usage.
 Discuss at least one improvement that can be done to the ERD.
 
+I think that one important improvement that can be made to the ERD is breaking down complex attributes, like location(County, City, Suburb...) details, into separate tables. This reduces redundancy, streamlines data maintenance, and enhances data integrity, making the database more organized and reliable.
+
 ## Question 2
 
 An analyst has asked you to run a query to see the number of movie tickets per genre that was sold in December last year. The data he needs is spread across two tables.
@@ -35,6 +37,13 @@ MovieID	| #Name | #Genre
 
 Using a SQL script, retrieve the data the analyst requires.
 
+```sql 
+SELECT M."Genre", COUNT(T."TicketID") AS "Tickets Sold" 
+FROM "Movies" AS M
+LEFT JOIN "Tickets" AS T ON M."MovieID" = T."MovieID"
+GROUP BY M."Genre"
+ORDER BY "Tickets Sold" DESC;
+```
 
 # Back-end Code Challenges
 * Only send back the code required for your the challenges
