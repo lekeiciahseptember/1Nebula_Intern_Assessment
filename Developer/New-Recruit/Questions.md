@@ -185,8 +185,44 @@ Given the below code snippet, solve the problems that follow:
 ```
 
 1. What will the colour of both div elements be?
+
+The colour of the first div element (<div id="firstDiv" class="red-card">) will be red and the colour of the second div element (<div id="secondDiv" class="red-card">) will be orange.
+
+
 2. How would you dynamically target ```firstDiv``` and make it's colour pink? (provide the code snippet)
+
+
+<!--  I would add a button on the firstDev element, and when the button is clicked the firstDiv element will change from red to pink. Below I've added code which should be in the html file to implement this. -->
+
+    ```html
+    <button onclick="changeColor()">Click to change colour to Pink</button>
+
+
+    <script>
+        function changeColor() {
+            var firstDiv = document.getElementById("firstDiv");
+            if (firstDiv) {
+            firstDiv.style.backgroundColor = "pink";
+            }
+        }
+        </script>
+    ```
+
+<!-- Alternatively if you'd want the page to load with the firstDev already being pink we can: -->
+    ```html
+
+    <div id="firstDiv" class="pink-card">
+
+    <style>
+    .pink-card {
+        background: pink;
+    }
+    </style>
+        ``
+
 3. How would you dynamically target ```secondDiv``` and add the ```yellow-card``` class to its class list? (provide the code snippet)
+<!-- Working on solution -->
+
 
 ## Question 2
 Consider the function below:
@@ -199,4 +235,13 @@ function legal(x) {
 ```
 
 1. Why will the function be parsed correctly? 
+
+Yes. This js function will be parsed correctly. Even though the variable is declared after the console.log. The var x will be hoisted to the top of the legal() fuction.
+
 2. How could you introduce a stricter syntax to variable/function declaration and avoid this behaviour?
+
+There are two ways in which we can introduce a stricter syntax:
+
+1.Firstly, we can use strict mode ("use strict"). This will result in the function throwing an error (ReferenceError) because the var x has not been declared.
+
+2.We can also change the keyword that is being used. Instead of using var, we can use the keywords - let or const as those keywords are block scoped, so they can only be accessed within the block in which they are declared in.
