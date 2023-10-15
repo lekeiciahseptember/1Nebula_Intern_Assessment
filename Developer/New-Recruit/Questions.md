@@ -230,8 +230,15 @@ The colour of the first div element (<div id="firstDiv" class="red-card">) will 
         ``
 
 3. How would you dynamically target ```secondDiv``` and add the ```yellow-card``` class to its class list? (provide the code snippet)
-<!-- Working on solution -->
 
+<!-- Made use of js in the html file - targeted the secondDiv by its Id then added the yellow-card class  -->
+```html 
+<script>
+    var secondDiv = document.getElementById("secondDiv");
+    if (secondDiv) {
+        secondDiv.classList.add('yellow-card');
+    }
+</script>```
 
 ## Question 2
 Consider the function below:
