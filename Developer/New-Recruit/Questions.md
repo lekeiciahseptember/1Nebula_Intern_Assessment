@@ -5,7 +5,7 @@
 Please see the attached ERD diagram image. The diagram was submitted as a solution to storing employee Cellphone data, voice and sms usage.
 Discuss at least one improvement that can be done to the ERD.
 
-I think that one important improvement that can be made to the ERD is breaking down complex attributes, like location(County, City, Suburb...) details, into separate tables. This reduces redundancy, streamlines data maintenance, and enhances data integrity, making the database more organized and reliable.
+I think that one important improvement that can be made to the ERD is breaking down complex attributes, like location(County, City, Suburb...) details, into separate tables. This reduces redundancy, streamlines data maintenance, and enhances data integrity, making the database more organized and reliable. Another improvement I would suggest is being consistent with naming conventions, as it would make it easier to understand and maintain.
 
 ## Question 2
 
@@ -261,3 +261,5 @@ There are two ways in which we can introduce a stricter syntax:
 1.Firstly, we can use strict mode ("use strict"). This will result in the function throwing an error (ReferenceError) because the var x has not been declared.
 
 2.We can also change the keyword that is being used. Instead of using var, we can use the keywords - let or const as those keywords are block scoped, so they can only be accessed within the block in which they are declared in.
+
+
